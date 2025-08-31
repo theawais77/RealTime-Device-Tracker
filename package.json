@@ -1,0 +1,24 @@
+{
+  "name": "realtime_device_tracker",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theawais77/RealTime-Device-Tracker.git"
+  },
+  "author": "awais tahit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theawais77/RealTime-Device-Tracker/issues"
+  },
+  "homepage": "https://github.com/theawais77/RealTime-Device-Tracker#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}
