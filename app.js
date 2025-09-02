@@ -17,9 +17,18 @@ app.set("views", path.join(__dirname, "views")); // ensure views folder is set
 app.use(express.static(path.join(__dirname, "public")));
 
 io.on("connection", (socket) => {
-  console.log("New client connected");
+  console.log("New client connected:", socket.id);
+  socket.on("send-location", (data) => {
+    io.emit("receive-location", {
+      id: socket.id,
+      latitude: data.latitude,
+      longitude: data.longitude,
+    });
+  });
+
   socket.on("disconnect", () => {
-    console.log("Client disconnected");
+    io.emit("user-disconnected", socket.id);
+    console.log("Client disconnected:", socket.id);
   });
 });
 
